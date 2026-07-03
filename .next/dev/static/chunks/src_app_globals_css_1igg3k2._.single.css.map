@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/globals.css"],"sourcesContent":[":root {\n  :root {\n    --main: #101828;\n    --text: #475467;\n    --white: #ffffff;\n    --inputs: #f7f7f7;\n    --badges: #f2f4f7;\n    --gray: #6c717b;\n    --gray-light: #dadde1;\n    --button: #e44848;\n    --button-hover: #d84343;\n    --rating: #ffc531;\n    --grey-green: #829b91;\n    --olive: #f0f1f1;\n    --green-hover: #6d7b75;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --background: #0a0a0a;\n    --foreground: #ededed;\n  }\n}\n\nhtml {\n  height: 100%;\n}\n\nhtml,\nbody {\n  max-width: 100vw;\n  overflow-x: hidden;\n}\n\nbody {\n  min-height: 100%;\n  display: flex;\n  flex-direction: column;\n  color: var(--foreground);\n  background: var(--background);\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n@media (prefers-color-scheme: dark) {\n  html {\n    color-scheme: dark;\n  }\n}\n"],"names":[],"mappings":"AACE;;;;;;;;;;;;;;;;AAiBF;EACE;;;;;;AAMF;;;;AAIA;;;;;AAMA;;;;;;;;;;AAUA;;;;;;AAMA;;;;;AAKA;EACE"}}]
-}

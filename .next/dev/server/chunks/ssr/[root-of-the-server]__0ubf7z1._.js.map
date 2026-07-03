@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///Users/alenkaalenka/Desktop/TravelTrucks/src/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,0IAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///Users/alenkaalenka/Desktop/TravelTrucks/src/components/Header/Header.tsx"],"sourcesContent":["import Link from 'next/link';\nimport css from './Header.module.css';\n\nexport default function Header() {\n  return (\n    <header className=\"{css.header}\">\n      <div className=\"{css.container}\">\n        <h2>TravelTrucks</h2>\n\n        <nav className=\"{css.nav}\">\n          <Link href=\"/\">Home</Link>\n          <Link href=\"/catalog\">Catalog</Link>\n        </nav>\n      </div>\n    </header>\n  );\n}\n"],"names":["Header","className","href"],"mappings":";;;;;AAAA;;;AAGe,SAASA;IACtB,qBACE,8OAAC;QAAOC,WAAU;kBAChB,cAAA,8OAAC;YAAIA,WAAU;;8BACb,8OAAC;8BAAG;;;;;;8BAEJ,8OAAC;oBAAIA,WAAU;;sCACb,8OAAC,0LAAI;4BAACC,MAAK;sCAAI;;;;;;sCACf,8OAAC,0LAAI;4BAACA,MAAK;sCAAW;;;;;;;;;;;;;;;;;;;;;;;AAKhC"}},
-    {"offset": {"line": 90, "column": 0}, "map": {"version":3,"sources":["file:///Users/alenkaalenka/Desktop/TravelTrucks/src/app/page.tsx"],"sourcesContent":["import Header from '@/components/Header/Header';\n\nexport default function Home() {\n  return (\n    <>\n      <Header />\n    </>\n  );\n}\n"],"names":["Home"],"mappings":";;;;;AAAA;;;AAEe,SAASA;IACtB,qBACE;kBACE,cAAA,8OAAC,iJAAM;;;;;;AAGb"}}]
-}
