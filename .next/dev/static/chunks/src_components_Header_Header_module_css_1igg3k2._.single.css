@@ -1,0 +1,48 @@
+/* [project]/src/components/Header/Header.module.css [app-client] (css) */
+.Header-module__ldgnoG__header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dadde1;
+  width: 100%;
+}
+
+.Header-module__ldgnoG__container {
+  box-sizing: border-box;
+  align-items: center;
+  max-width: 1440px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: flex;
+}
+
+.Header-module__ldgnoG__logo {
+  color: #101828;
+  margin-right: 450px;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.Header-module__ldgnoG__logo span {
+  color: #dadde1;
+}
+
+.Header-module__ldgnoG__nav {
+  align-items: center;
+  gap: 32px;
+  display: flex;
+}
+
+.Header-module__ldgnoG__link {
+  color: #101828;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.Header-module__ldgnoG__link:hover {
+  color: #829b91;
+}
+
+/*# sourceMappingURL=src_components_Header_Header_module_css_1igg3k2._.single.css.map*/

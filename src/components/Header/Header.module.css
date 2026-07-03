@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dadde1;
+}
+
+.container {
+  max-width: 1440px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #101828;
+  text-decoration: none;
+  margin-right: 450px;
+}
+
+.logo span {
+  color: #dadde1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  color: #101828;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #829b91;
+}
