@@ -11,29 +11,25 @@
   padding: 0 64px;
 
   display: flex;
-
   align-items: center;
 
-  box-sizing: border-box;
+  position: relative;
+
+  justify-content: flex-start;
 }
 
 .logo {
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #101828;
-  text-decoration: none;
-  margin-right: 450px;
-}
-
-.logo span {
-  color: #dadde1;
-}
-
-.nav {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+.nav {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
   gap: 32px;
 }
 
