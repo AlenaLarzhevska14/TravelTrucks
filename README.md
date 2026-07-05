@@ -61,7 +61,7 @@ npm run dev
 Open:
 
 ```
-http://localhost:3000
+https://travel-trucks-delta-azure-54.vercel.app/
 ```
 
 ## 📦 Build

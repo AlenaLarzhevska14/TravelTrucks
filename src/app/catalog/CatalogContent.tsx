@@ -2,14 +2,11 @@
 
 import { useState } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import Filters from '@/components/Filters/ Filters';
+import Filters from '@/components/Filters/Filters';
 import CamperList from '@/components/CamperList/CamperList';
 import { getCampers } from '@/services/campers';
 import { CamperFilters } from '@/types/camper';
-import {
-  initialCamperFilters,
-  normalizeCamperFilters,
-} from '@/utils/campers';
+import { initialCamperFilters, normalizeCamperFilters } from '@/utils/campers';
 
 const CAMPERS_PER_PAGE = 4;
 
@@ -49,9 +46,7 @@ export default function CatalogContent() {
   const campers = data?.pages.flatMap(page => page.campers) ?? [];
   const isSearching = isFetching && !isFetchingNextPage;
   const errorMessage =
-    error instanceof Error && campers.length === 0
-      ? error.message
-      : undefined;
+    error instanceof Error && campers.length === 0 ? error.message : undefined;
 
   function updateFilter<Key extends keyof CamperFilters>(
     key: Key,
