@@ -1,0 +1,142 @@
+.card {
+  padding: 32px;
+
+  border: 1px solid #dadde1;
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.title {
+  margin-bottom: 8px;
+
+  color: #101828;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+
+  color: #6c717b;
+  line-height: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  color: #101828;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 16px 18px;
+
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  outline: none;
+  background: #f7f7f7;
+
+  color: #101828;
+  font-size: 16px;
+  line-height: 24px;
+
+  transition: border-color 250ms ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #829b91;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  height: 56px;
+  margin-top: 8px;
+
+  border: none;
+  border-radius: 200px;
+
+  background: #829b91;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.submit:hover {
+  background: #6d7b75;
+}
+
+.submit:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.errorText {
+  color: #d84343;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.successMessage,
+.errorMessage {
+  margin-top: 16px;
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.successMessage {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.errorMessage {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.inputError {
+  border: 1px solid #e44848;
+  background: #fef3f2;
+  color: #101828;
+}
+
+.inputError::placeholder {
+  color: #6c717b;
+}
+
+.errorText {
+  margin-top: 4px;
+  color: #e44848;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

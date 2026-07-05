@@ -1,21 +1,19 @@
 import Header from '@/components/Header/Header';
-import Filters from '@/components/Filters/ Filters';
-import CamperList from '@/components/CamperList/CamperList';
 import css from './page.module.css';
-import { getCampers } from '@/services/campers';
+import CatalogContent from './CatalogContent';
 
-export default async function CatalogPage() {
-  const campers = await getCampers();
-  console.log(campers);
-  console.log(Array.isArray(campers));
-  console.log(Array.isArray(campers.campers));
+export const metadata = {
+  title: 'Catalog',
+  description:
+    'Browse the TravelTrucks camper catalog with filters for location, form, engine, and transmission.',
+};
 
+export default function CatalogPage() {
   return (
     <>
       <Header />
       <main className={css.main}>
-        <Filters />
-        <CamperList campers={campers.campers} />
+        <CatalogContent />
       </main>
     </>
   );

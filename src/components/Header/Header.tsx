@@ -1,14 +1,22 @@
-import Link from 'next/link';
-import css from './Header.module.css';
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import css from './Header.module.css';
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const logo = pathname === '/' ? '/images/Logo.svg' : '/images/LogoGrey.svg';
+
   return (
     <header className={css.header}>
       <div className={css.container}>
         <Link href="/" className={css.logo}>
           <Image
-            src="/images/Logo.svg"
+            src={logo}
             alt="TravelTrucks"
             width={136}
             height={16}

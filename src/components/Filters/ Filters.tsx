@@ -1,14 +1,31 @@
 import css from './Filters.module.css';
 import { FiMapPin } from 'react-icons/fi';
 import { IoCloseOutline } from 'react-icons/io5';
+import { CamperFilters } from '@/types/camper';
+import {
+  camperFormOptions,
+  engineOptions,
+  transmissionOptions,
+} from '@/utils/campers';
 
-export default function Filters() {
-  const vehicleTypes = ['Alcove', 'Panel Van', 'Integrated', 'Semi Integrated'];
+type FiltersProps = {
+  filters: CamperFilters;
+  isLoading: boolean;
+  onFilterChange: <Key extends keyof CamperFilters>(
+    key: Key,
+    value: CamperFilters[Key]
+  ) => void;
+  onSearch: () => void;
+  onClear: () => void;
+};
 
-  const engines = ['Diesel', 'Petrol', 'Hybrid', 'Electric'];
-
-  const transmissions = ['Automatic', 'Manual'];
-
+export default function Filters({
+  filters,
+  isLoading,
+  onFilterChange,
+  onSearch,
+  onClear,
+}: FiltersProps) {
   return (
     <aside className={css.filters}>
       <div className={css.location}>
@@ -17,7 +34,13 @@ export default function Filters() {
         <div className={css.inputWrapper}>
           <FiMapPin className={css.icon} />
 
-          <input type="text" placeholder="City" className={css.input} />
+          <input
+            type="text"
+            placeholder="City"
+            className={css.input}
+            value={filters.location}
+            onChange={event => onFilterChange('location', event.target.value)}
+          />
         </div>
       </div>
 
@@ -25,10 +48,16 @@ export default function Filters() {
       <div className={css.group}>
         <h3 className={css.groupTitle}>Camper form</h3>
 
-        {vehicleTypes.map(item => (
-          <label key={item} className={css.radio}>
-            <input type="radio" name="vehicle" />
-            {item}
+        {camperFormOptions.map(item => (
+          <label key={item.value} className={css.radio}>
+            <input
+              type="radio"
+              name="vehicle"
+              value={item.value}
+              checked={filters.form === item.value}
+              onChange={event => onFilterChange('form', event.target.value)}
+            />
+            {item.label}
           </label>
         ))}
       </div>
@@ -36,10 +65,16 @@ export default function Filters() {
       <div className={css.group}>
         <h3 className={css.groupTitle}>Engine</h3>
 
-        {engines.map(item => (
-          <label key={item} className={css.radio}>
-            <input type="radio" name="engine" />
-            {item}
+        {engineOptions.map(item => (
+          <label key={item.value} className={css.radio}>
+            <input
+              type="radio"
+              name="engine"
+              value={item.value}
+              checked={filters.engine === item.value}
+              onChange={event => onFilterChange('engine', event.target.value)}
+            />
+            {item.label}
           </label>
         ))}
       </div>
@@ -47,18 +82,31 @@ export default function Filters() {
       <div className={css.group}>
         <h3 className={css.groupTitle}>Transmission</h3>
 
-        {transmissions.map(item => (
-          <label key={item} className={css.radio}>
-            <input type="radio" name="transmission" />
-            {item}
+        {transmissionOptions.map(item => (
+          <label key={item.value} className={css.radio}>
+            <input
+              type="radio"
+              name="transmission"
+              value={item.value}
+              checked={filters.transmission === item.value}
+              onChange={event =>
+                onFilterChange('transmission', event.target.value)
+              }
+            />
+            {item.label}
           </label>
         ))}
       </div>
       <div className={css.buttons}>
-        <button type="submit" className={css.searchBtn}>
+        <button
+          type="button"
+          className={css.searchBtn}
+          onClick={onSearch}
+          disabled={isLoading}
+        >
           Search
         </button>
-        <button type="button" className={css.clearBtn}>
+        <button type="button" className={css.clearBtn} onClick={onClear}>
           <IoCloseOutline className={css.clearIcon} />
           <span>Clear filters</span>
         </button>

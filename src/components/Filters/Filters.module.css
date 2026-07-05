@@ -136,6 +136,11 @@
   transition: background 250ms ease;
 }
 
+.searchBtn:disabled {
+  background: #aeb9b4;
+  cursor: wait;
+}
+
 .searchBtn:hover {
   background: #6d837a;
 }
